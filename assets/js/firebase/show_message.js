@@ -1,4 +1,4 @@
-export function showMessage (message,color){
+export function showMessage(message, color) {
     Toastify({
         text: message,
         duration: 3000,
@@ -12,5 +12,5 @@ export function showMessage (message,color){
           background: color,
         },
         onClick: function(){} // Callback after click
-      }).showToast();
+    }).showToast();
 }
