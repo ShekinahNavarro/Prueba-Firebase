@@ -10,6 +10,10 @@ let userGlobal;
 export default function setupTask(user) {
     userGlobal = user;
 
+    const userPhotoURL = userGlobal.photoURL;
+
+    console.log(user);
+
      onGetTask((querySnapshot) => {
         let html = '';
 
@@ -20,6 +24,7 @@ export default function setupTask(user) {
             html += `
                 <div class="card mb-3">
                     <div class="card-body">
+                    <img src="${userPhotoURL}" alt="User Photo" class="user-photo">
                         <p class="text-end">${data.date} ${data.hours}</p>
                         <h6>${data.userName}</h6>
                         <h4 class="card-title">${data.title}</h4>
@@ -79,6 +84,7 @@ taskForm.addEventListener("submit", (e) => {
 
      //HORA
      const hours = getFormattedHour( new Date());
+
 
     const title = taskForm["task-title"].value;
     const description = taskForm["task-content"].value;
