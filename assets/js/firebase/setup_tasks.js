@@ -6,7 +6,7 @@ const tasksContainer = document.getElementById("tasks-container");
 let id = "";
 let editStatus= false;
 
-window.addEventListener("DOMContentLoaded",() =>{
+export default function setupTask() {
      onGetTask((querySnapshot) => {
         let html = '';
 
@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded",() =>{
             });
         });
      });
-});
+};
 
 //CREATE
 
