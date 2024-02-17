@@ -24,7 +24,7 @@
   export const db = getFirestore(); 
 
   // Funciones del CRUD
-  export const createTask = (title, description)=> addDoc(collection(db,"tasks"),{title,description});
+  export const createTask = (title, description, userName, date, hours)=> addDoc(collection(db,"tasks"),{title, description, userName, date, hours});
 
   export const getTask = id => getDoc(doc(db,"tasks",id));
 //callback funcion que se pasa como parametro de otra funcion  //snapshot = cada que hay un cambio en la base de datos
