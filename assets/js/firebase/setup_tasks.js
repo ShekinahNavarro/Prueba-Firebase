@@ -74,9 +74,8 @@ taskForm.addEventListener("submit", (e) => {
          title: title,
          description: description,
         }));
-
-        editStatus = false;
         
+        editStatus = false;
         taskForm['btn-task-save'].innerHTML = 'create';
     }
 
