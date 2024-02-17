@@ -31,6 +31,7 @@
         </div>
       </nav>
     <h1>Autenticación con Firebase</h1>
+
     <main class="row w-75 mx-auto">
       <div class="col-md-6" id="task-form-container">
         <div id="create-tasks">
@@ -39,7 +40,8 @@
             <input type="text" id="task-title" />
             <label for="task-content">Content:</label>
             <textarea id="task-content" cols="30" rows="5"></textarea>
-            <button type="submit">Create Task</button>
+            <br>
+            <button type="submit" id="btn-task-save">Create Task</button>
           </form>
         </div>
       </div>
@@ -47,6 +49,7 @@
       <!-- Acá se mostrarán las tasks de la base de datos -->
       <div class="col-md-6" id="tasks-container"></div>
     </main>
+
     <!-- Signin modal -->
     <div class="modal fade" id="signin-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
