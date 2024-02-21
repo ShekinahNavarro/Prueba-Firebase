@@ -24,9 +24,11 @@ export default function setupTask(user) {
             html += `
                 <div class="card mb-3">
                     <div class="card-body">
-                    <img src="${userPhotoURL}" alt="User Photo" class="user-photo">
                         <p class="text-end">${data.date} ${data.hours}</p>
-                        <h6>${data.userName}</h6>
+                        <div class="d-flex align-items-center">
+                            <img src="${data.userPhotoURL}" class="me-2" style="width: 40px; height: 40px; border-radius: 50%;" />
+                            <h6>${data.userName}</h6>
+                        </div>
                         <h4 class="card-title">${data.title}</h4>
                         <p class="card-text">${data.description}</p>
                         <div class="row">
@@ -79,6 +81,9 @@ taskForm.addEventListener("submit", (e) => {
 
     const userName = userGlobal.displayName;
 
+    //foto
+    const userPhotoURL = userGlobal.photoURL;
+
      //FECHA
      const date = getFormattedDate(new Date ());
 
@@ -90,7 +95,7 @@ taskForm.addEventListener("submit", (e) => {
     const description = taskForm["task-content"].value;
     //SI NO ESTOY EDITANDO EL BOTON SIRVE PARA CREAR
     if (!editStatus){
-        createTask(title,description,userName,date,hours);
+        createTask(title,description,userName,date,hours,userPhotoURL);
     }
     else{
         updateTask(id, ({
