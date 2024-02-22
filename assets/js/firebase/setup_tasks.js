@@ -32,8 +32,8 @@ export default function setupTask(user) {
                         <h4 class="card-title">${data.title}</h4>
                         <p class="card-text">${data.description}</p>
                         <div class="row">
-                            <button class='btn btn-danger btn-delete-custom mx-auto col-5' data-id='${doc.id}'> <i class="bi bi-trash3"></i>  Delete </button>
-                            <button class='btn btn-info btn-edit-custom mx-auto col-5' data-id='${doc.id}'> <i class="bi bi-pencil-square"></i> Edit </button>
+                            <button class='btn btn-danger btn-delete-custom mx-auto col-5 rounded-5 rounded-top-0"' data-id='${doc.id}'> <i class="bi bi-trash3"></i>  Delete </button>
+                            <button class='btn btn-info btn-edit-custom mx-auto col-5 rounded-5 rounded-top-0"' data-id='${doc.id}'> <i class="bi bi-pencil-square"></i> Edit </button>
                         </div>
                     </div>
                 </div>
