@@ -22,7 +22,7 @@ export default function setupTask(user) {
     
 
             html += `
-                <div class="card mb-3">
+                <div class="card mb-3 bg-success-subtle">
                     <div class="card-body">
                         <p class="text-end">${data.date} ${data.hours}</p>
                         <div class="d-flex align-items-center">
