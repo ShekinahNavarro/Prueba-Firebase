@@ -22,7 +22,7 @@ export default function setupTask(user) {
     
 
             html += `
-                <div class="card mb-3">
+                <div class="card mb-3 bg-warning-subtle">
                     <div class="card-body">
                         <p class="text-end">${data.date} ${data.hours}</p>
                         <div class="d-flex align-items-center">
@@ -32,8 +32,8 @@ export default function setupTask(user) {
                         <h4 class="card-title">${data.title}</h4>
                         <p class="card-text">${data.description}</p>
                         <div class="row">
-                            <button class='btn btn-danger btn-delete-custom mx-auto col-5' data-id='${doc.id}'>Delete</button>
-                            <button class='btn btn-info btn-edit-custom mx-auto col-5' data-id='${doc.id}'>Edit</button>
+                            <button class='btn btn-danger btn-delete-custom mx-auto col-5' data-id='${doc.id}'> <i class="bi bi-trash3"></i>  Delete </button>
+                            <button class='btn btn-info btn-edit-custom mx-auto col-5' data-id='${doc.id}'> <i class="bi bi-pencil-square"></i> Edit </button>
                         </div>
                     </div>
                 </div>
